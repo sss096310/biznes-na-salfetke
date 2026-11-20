@@ -172,11 +172,11 @@
     // lights: soft daylight
     const key=new T.SpotLight(0xffcf9a,1.25,14,Math.PI/7,.85,1.2);key.position.set(0,6.5,2.2);key.target.position.set(0,.4,.35);key.castShadow=true;key.shadow.mapSize.set(1536,1536);key.shadow.radius=5;scene.add(key,key.target);
     const face=new T.SpotLight(0xffe2c2,.7,12,Math.PI/9,.8,1.2);face.position.set(0,2.4,6);face.target.position.set(0,1,.35);scene.add(face,face.target);
-    [-2.8,-1,1,2.8].forEach(x=>{const u=new T.SpotLight(0xffcf9e,1.1,7,Math.PI/9,.9,1.4);u.position.set(x,.1,-3.2);u.target.position.set(x*1.05,3.6,-4);scene.add(u,u.target)});
+    [-4.4,-2.6,2.6,4.4].forEach(x=>{const u=new T.SpotLight(0xffcf9e,1.1,7,Math.PI/9,.9,1.4);u.position.set(x,.1,-3.2);u.target.position.set(x*1.05,3.6,-4);scene.add(u,u.target)});
     [-3.6,3.6].forEach(x=>{const pl=new T.SpotLight(0xffe0b8,.8,6,Math.PI/8,.8,1.3);pl.position.set(x,4.5,-.6);pl.target.position.set(x,1,-1.6);scene.add(pl,pl.target)});
     const fontS='"Onest", "Inter", Arial, sans-serif',hand='"Marck Script", Caveat, cursive';
-    function logoC(){return cv(2048,512,(x,w,h)=>{x.clearRect(0,0,w,h);x.fillStyle='#3552e6';x.shadowColor='rgba(70,100,255,.85)';x.shadowBlur=28;x.textAlign='center';x.textBaseline='middle';x.font='800 128px '+fontS;try{x.letterSpacing='10px'}catch(e){}
-      x.fillText('БИЗНЕС НА САЛФЕТКЕ',w/2,h*.4);x.fillRect(150,h*.66,w-300,34);x.fillRect(150,h*.66+48,w-300,4)})}
+    function logoC(){return cv(2048,512,(x,w,h)=>{x.clearRect(0,0,w,h);x.fillStyle='#5a78ff';x.shadowColor='rgba(70,100,255,1)';x.shadowBlur=36;x.textAlign='center';x.textBaseline='middle';x.font='800 128px '+fontS;try{x.letterSpacing='10px'}catch(e){}
+      x.fillText('БИЗНЕС НА САЛФЕТКЕ',w/2,h*.4);x.shadowBlur=60;x.fillText('БИЗНЕС НА САЛФЕТКЕ',w/2,h*.4);x.shadowBlur=36;x.fillRect(150,h*.66,w-300,34);x.fillRect(150,h*.66+48,w-300,4)})}
     function logoB(){return cv(1024,1024,(x,w,h)=>{x.clearRect(0,0,w,h);const S=840,r=22,n=Math.round(S/(2*r)),st=S/n,o=(w-S)/2;
       x.fillStyle='#f6f4ef';x.beginPath();x.moveTo(o,o);for(let i=0;i<n;i++)x.arc(o+st*(i+.5),o,st/2,Math.PI,0);for(let i=0;i<n;i++)x.arc(o+S,o+st*(i+.5),st/2,-Math.PI/2,Math.PI/2);for(let i=0;i<n;i++)x.arc(o+S-st*(i+.5),o+S,st/2,0,Math.PI);for(let i=0;i<n;i++)x.arc(o,o+S-st*(i+.5),st/2,Math.PI/2,Math.PI*1.5);x.fill();
       x.strokeStyle='#1d3592';x.lineWidth=5;x.setLineDash([4,22]);x.lineCap='round';x.strokeRect(o+70,o+70,S-140,S-140);x.setLineDash([]);

@@ -57,11 +57,12 @@ nav a:hover,nav a:focus-visible{color:var(--fg)}
 @media (max-width:560px){nav b{display:none}}
 
 .hero{position:relative;text-align:center;padding-block:clamp(70px,10vw,130px) clamp(60px,8vw,100px);overflow:hidden}
-.hero::before{content:"";position:absolute;left:50%;top:6%;width:min(900px,120vw);aspect-ratio:2;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(255,200,140,.16),transparent);pointer-events:none}
+.hero::before{content:"";position:absolute;left:50%;top:6%;width:min(900px,120vw);aspect-ratio:2;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(70,100,255,.2),transparent);pointer-events:none}
 .hring{display:block;width:min(560px,86vw);height:auto;margin:0 auto}
 .hring ellipse{fill:none}
 .hero h1{font-size:clamp(54px,10.5vw,132px);font-weight:800;line-height:.92;letter-spacing:-.055em;margin-top:clamp(28px,4vw,44px)}
-.hero h1 span{display:block;color:var(--mut);font-weight:700;font-size:.42em;letter-spacing:-.03em;margin-top:.3em}
+.hero h1 .hlogo{display:table;margin-left:auto;margin-right:auto;font-family:"Onest","Inter",sans-serif;font-weight:800;color:#6f8bff;letter-spacing:.14em;font-size:.26em;margin-top:.9em;padding-bottom:.35em;border-bottom:.12em solid #3552e6;text-shadow:0 0 24px rgba(70,100,255,.55)}
+.hero h1 span:not(.hlogo){display:block;color:var(--mut);font-weight:700;font-size:.42em;letter-spacing:-.03em;margin-top:.3em}
 .hero .sub{font-size:clamp(18px,2vw,22px);color:var(--mut);margin:26px auto 0;max-width:640px}
 .hero-meta{display:flex;justify-content:center;gap:clamp(24px,6vw,64px);flex-wrap:wrap;margin-top:44px;color:var(--dim);font-size:13px}
 .hero-meta div{display:flex;flex-direction:column;gap:4px}
@@ -211,25 +212,25 @@ nav a:hover,nav a:focus-visible{color:var(--fg)}
 @media (max-width:700px){.frames{gap:28px}.fr .scr{border-radius:12px}.gal figcaption{padding:12px 14px}}
 @media (max-width:700px){.frames{grid-template-columns:1fr}}
 
-.r-lt{position:absolute;left:5cqw;bottom:7cqw;display:flex;align-items:center;gap:2.2cqw}
+.r-lt{position:absolute;left:4cqw;bottom:5cqw;display:flex;align-items:center;gap:2cqw;padding:1.6cqw 5cqw 1.6cqw 1.8cqw;border-radius:.8cqw;background:linear-gradient(90deg,rgba(12,26,102,.94),rgba(12,26,102,.8) 70%,rgba(12,26,102,0));border-left:.45cqw solid #5a78ff}
 .r-lt svg{width:7cqw;height:7cqw;flex:none;overflow:visible}
-.r-lt svg circle{fill:none;stroke:#ffe4c4;stroke-width:3;filter:drop-shadow(0 0 6px rgba(255,200,140,.8))}
+.r-lt svg circle{fill:none;stroke:#cdd7ff;stroke-width:3;filter:drop-shadow(0 0 6px rgba(90,120,255,.9))}
 .r-lt .nm{font-family:var(--r-text);font-weight:600;font-size:3.6cqw;color:#fff;letter-spacing:-.01em;line-height:1.05;text-shadow:0 2px 14px rgba(0,0,0,.6)}
-.r-lt .rl{font-family:var(--r-text);font-weight:400;font-size:1.9cqw;color:rgba(255,236,214,.88);margin-top:.6cqw;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.r-lt .rl{font-family:var(--r-text);font-weight:400;font-size:1.9cqw;color:#c9d3ff;margin-top:.6cqw;text-shadow:0 2px 10px rgba(0,0,0,.6)}
 .r-ch{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
-.r-ch .box{position:relative;padding:4cqw 8cqw}
+.r-ch .box{position:relative;padding:4cqw 8cqw;background:radial-gradient(ellipse at center,rgba(12,26,102,.88) 0,rgba(12,26,102,.6) 45%,rgba(12,26,102,0) 72%)}
 .r-ch svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.r-ch svg ellipse{fill:none;stroke:#ffe4c4;stroke-width:2;filter:drop-shadow(0 0 8px rgba(255,200,140,.7))}
-.r-ch .k{font-family:var(--r-text);font-weight:500;font-size:1.7cqw;letter-spacing:.35em;color:#ffd29a}
+.r-ch svg ellipse{fill:none;stroke:#8fa6ff;stroke-width:2.5;filter:drop-shadow(0 0 8px rgba(90,120,255,.9))}
+.r-ch .k{font-family:var(--r-text);font-weight:500;font-size:1.7cqw;letter-spacing:.35em;color:#a9bbff}
 .r-ch .h{font-family:var(--r-disp);font-weight:600;font-size:4.6cqw;color:#fff;margin-top:1cqw;letter-spacing:-.01em}
 .r-num{position:absolute;right:6cqw;top:10cqw}
 .r-num .v{font-family:var(--r-hand);font-weight:700;font-size:10cqw;color:#ffe4c4;line-height:.9;text-shadow:0 0 20px rgba(255,190,120,.45)}
 .r-num svg{display:block;width:26cqw;height:3cqw;margin-top:-.5cqw;overflow:visible}
-.r-num svg path{fill:none;stroke:#ffd29a;stroke-width:4;stroke-linecap:round}
-.r-num .c{font-family:var(--r-text);font-size:1.8cqw;color:rgba(255,236,214,.88);margin-top:1cqw;text-shadow:0 2px 10px rgba(0,0,0,.6)}
-.r-th{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:4.5cqw 5cqw;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.7))}
-.r-th .brand{position:absolute;top:4cqw;left:5cqw;display:flex;align-items:center;gap:1.4cqw;font-family:var(--r-text);font-weight:600;font-size:1.8cqw;color:#ffe4c4;letter-spacing:.12em;text-transform:uppercase}
-.r-th .brand i{width:3.6cqw;height:1.4cqw;border:2px solid #ffe4c4;border-radius:50%;box-shadow:0 0 8px rgba(255,200,140,.8)}
+.r-num svg path{fill:none;stroke:#5a78ff;stroke-width:5;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(90,120,255,.9))}
+.r-num .c{display:inline-block;font-family:var(--r-text);font-size:1.8cqw;color:#fff;margin-top:1.2cqw;background:rgba(12,26,102,.9);padding:.5cqw 1.2cqw;border-radius:.5cqw}
+.r-th{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:4.5cqw 5cqw;background:linear-gradient(90deg,rgba(8,16,60,.92) 0,rgba(8,16,60,.75) 38%,rgba(8,16,60,0) 70%)}
+.r-th .brand{position:absolute;top:4cqw;left:5cqw;display:flex;align-items:center;gap:1.4cqw;font-family:var(--r-text);font-weight:600;font-size:1.8cqw;color:#fff;letter-spacing:.12em;text-transform:uppercase;background:#1d3592;padding:.8cqw 1.6cqw;border-radius:99px}
+.r-th .brand i{width:3.6cqw;height:1.4cqw;border:2px solid #fff;border-radius:50%}
 .r-th .h{font-family:var(--r-disp);font-weight:700;font-size:8.6cqw;color:#fff;line-height:.95;letter-spacing:-.03em}
 .r-th .s{font-family:var(--r-hand);font-weight:700;font-size:5cqw;color:#ffd29a;margin-top:.6cqw}
 
@@ -325,11 +326,11 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
 <header class="hero wrap">
   <svg class="hring" viewBox="0 0 560 170" aria-hidden="true">
     <defs><filter id="bl" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="9"/></filter></defs>
-    <ellipse class="halo" cx="280" cy="85" rx="250" ry="58" stroke="#ffd29a" stroke-opacity=".55" stroke-width="12" filter="url(#bl)"/>
-    <ellipse class="draw" cx="280" cy="85" rx="250" ry="58" stroke="#fff2df" stroke-width="3"/>
+    <ellipse class="halo" cx="280" cy="85" rx="250" ry="58" stroke="#5a78ff" stroke-opacity=".75" stroke-width="12" filter="url(#bl)"/>
+    <ellipse class="draw" cx="280" cy="85" rx="250" ry="58" stroke="#dfe5ff" stroke-width="3"/>
   </svg>
-  <h1>Два сета<span>для шоу «Бизнес на салфетке»</span></h1>
-  <p class="sub">Предложение по новому визуальному формату: исследование, две концепции сета, мини брендбук к каждой и пилотный выпуск с Катей Голден.</p>
+  <h1>Два сета<span class="hlogo">БИЗНЕС НА САЛФЕТКЕ</span></h1>
+  <p class="sub">Предложение по новому визуальному формату шоу: исследование, две концепции студии в фирменной сине белой палитре, логотип, мини брендбук с конкретными шрифтами и пилотный выпуск с Катей Голден.</p>
   <div class="hero-meta"><div>Для<strong>команды Михаила Кучмента</strong></div><div>Дата<strong>ноябрь 2026</strong></div></div>
 </header>
 
@@ -491,8 +492,8 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
         <div class="spec rv"><span class="nm">Палитра</span><div class="pal"><span><i style="background:#0b0b0c"></i>Ночь #0B0B0C</span><span><i style="background:#ffe4c4"></i>Свет #FFE4C4</span><span><i style="background:#ffd29a"></i>Накал #FFD29A</span><span><i style="background:#0c1a66"></i>Синий шоу #0C1A66</span><span><i style="background:#e6b49c"></i>Цвет гостя</span></div><p>Цвет гостя живет только на подиуме. Графика всегда остается в цветах света.</p></div>
       </div>
       <div class="frames">
-        <div class="fr rv"><div class="scr anim"><img src="ring_kg_two.jpg" alt=""><div class="r-lt"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25"/></svg><div class="txt"><div class="nm">Катя Голден</div><div class="rl">телеведущая, основательница бьюти бренда</div></div></div></div><p class="t"><b>Плашка гостя.</b> Кольцо прорисовывается, имя выезжает следом. Без подложки, только свет и текст.</p></div>
-        <div class="fr rv"><div class="scr anim"><img src="ring_kg.jpg" alt=""><div class="dark"></div><div class="r-ch"><div class="box"><svg viewBox="0 0 400 140" preserveAspectRatio="none"><ellipse cx="200" cy="70" rx="196" ry="66"/></svg><div class="k">ГЛАВА 02</div><div class="h">С ЧЕГО НАЧИНАЛИ</div></div></div></div><p class="t"><b>Глава.</b> Название темы внутри светового кольца, появляется при смене блока.</p></div>
+        <div class="fr rv"><div class="scr anim"><img src="ring_kg_two.jpg" alt=""><div class="r-lt"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25"/></svg><div class="txt"><div class="nm">Катя Голден</div><div class="rl">телеведущая, основательница бьюти бренда</div></div></div></div><p class="t"><b>Плашка гостя.</b> Кольцо прорисовывается, имя выезжает следом на полупрозрачной подложке фирменного синего.</p></div>
+        <div class="fr rv"><div class="scr anim"><img src="ring_kg.jpg" alt=""><div class="dark"></div><div class="r-ch"><div class="box"><svg viewBox="0 0 400 140" preserveAspectRatio="none"><ellipse cx="200" cy="70" rx="196" ry="66"/></svg><div class="k">ГЛАВА 02</div><div class="h">С ЧЕГО НАЧИНАЛИ</div></div></div></div><p class="t"><b>Глава.</b> Название темы внутри синего светового кольца, появляется при смене блока.</p></div>
         <div class="fr rv"><div class="scr anim"><img src="ring_pulkovo.jpg" alt=""><div class="dark" style="background:rgba(0,0,0,.3)"></div><div class="r-num"><div class="v">245 млрд</div><svg viewBox="0 0 260 30"><path d="M4 18 C 70 6, 150 30, 256 10"/></svg><div class="c">выручка «Рольфа» за год</div></div></div><p class="t"><b>Цифра.</b> Почерком, как на салфетке, с подчеркиванием от руки. Пример из описания выпуска с главой «Рольфа».</p></div>
         <div class="fr rv"><div class="scr anim"><img src="ring_kg_top.jpg" alt=""><div class="r-th"><div class="brand"><i></i>Бизнес на салфетке</div><div class="h">КАТЯ<br>ГОЛДЕН</div><div class="s">фраза из выпуска</div></div></div><p class="t"><b>Обложка.</b> Подиум гостя, крупное имя и короткая фраза почерком. Фразу берем из записанного выпуска.</p></div>
       </div>
@@ -539,10 +540,10 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
 .vs h4{font-size:18px;font-weight:600}.vs p{font-size:15px;color:var(--mut)}
 @media (max-width:700px){.vs{grid-template-columns:1fr}}
 .i-lt{position:absolute;left:5cqw;bottom:6cqw;background:var(--sheet);color:var(--ink-deep);padding:2.2cqw 3.2cqw;border-radius:.5cqw;transform:rotate(-1.5deg);box-shadow:0 1.5cqw 3cqw rgba(0,0,0,.4)}
-.i-lt .nm{font:700 4.6cqw/1 var(--r-hand);color:var(--ink)}
-.i-lt .rl{font:500 1.8cqw var(--text);color:#3b4370;margin-top:.8cqw}
+.i-lt .nm{font:5cqw/1 "Marck Script",cursive;color:var(--ink)}
+.i-lt .rl{font:500 1.8cqw "Onest",var(--text);color:#3b4370;margin-top:.8cqw}
 .i-num{position:absolute;right:6cqw;top:9cqw;text-align:right}
-.i-num .v{font:700 11cqw/.9 var(--r-hand);color:#a9bbff;text-shadow:0 0 24px rgba(80,110,255,.45)}
+.i-num .v{font:11cqw/.9 "Marck Script",cursive;color:#a9bbff;text-shadow:0 0 24px rgba(80,110,255,.45)}
 .i-num .c{font:500 1.9cqw var(--text);color:#dfe5ff;margin-top:1cqw}
 @container (max-width:520px){.i-lt .rl,.i-num .c{font-size:3cqw}}
 </style>
@@ -633,10 +634,18 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
 
     <div class="block">
       <div class="eyebrow rv">Графика</div>
-      <h3 class="h3 rv">Фирменный шрифт и логотип плюс рукописные чернила.</h3>
+      <h3 class="h3 rv">Два шрифта и одна палитра.</h3>
+      <div class="bb">
+        <div class="bb-row">
+          <div class="spec rv"><span class="aa" style="font-family:'Onest';font-weight:800;letter-spacing:.06em">АА</span><span class="nm">Onest ExtraBold</span><p>Логотип, заголовки глав, обложки. Только заглавные с разрядкой.</p></div>
+          <div class="spec rv"><span class="aa" style="font-family:'Onest';font-weight:500">Аа</span><span class="nm">Onest Medium</span><p>Роли гостей, подписи, субтитры. Тот же шрифт в спокойном весе.</p></div>
+          <div class="spec rv"><span class="aa" style="font-family:'Marck Script';color:#8fa6ff">Аа 245</span><span class="nm">Marck Script</span><p>Рукописные чернила: имена на табличках, цифры, фразы гостя, слово «салфетке» в логотипе.</p></div>
+        </div>
+        <div class="spec rv"><span class="nm">Палитра</span><div class="pal"><span><i style="background:#1d3592"></i>Чернила #1D3592</span><span><i style="background:#5a78ff"></i>Неон #5A78FF</span><span><i style="background:#f4f1ea"></i>Салфетка #F4F1EA</span><span><i style="background:#8d9096"></i>Шторы #8D9096</span><span><i style="background:#ffcf9a"></i>Теплый свет #FFCF9A</span></div><p>Синий только глубокий чернильный и светящийся неон. Яркий интерфейсный синий в шоу не используем.</p></div>
+      </div>
       <div class="frames">
-        <div class="fr rv"><div class="scr anim"><img src="ink_two.jpg" alt=""><div class="i-lt"><div class="nm">Катя Голден</div><div class="rl">телеведущая, основательница бьюти бренда</div></div></div><p class="t"><b>Плашка гостя.</b> Белая карточка салфетки, имя синими чернилами, роль фирменным шрифтом.</p></div>
-        <div class="fr rv"><div class="scr anim"><img src="ink_wide.jpg" alt=""><div class="dark" style="background:rgba(8,14,40,.45)"></div><div class="i-num"><div class="v">245 млрд</div><div class="c">выручка «Рольфа» за год</div></div></div><p class="t"><b>Цифра.</b> Почерком синими чернилами, как на салфетке.</p></div>
+        <div class="fr rv"><div class="scr anim"><img src="ink_two.jpg" alt=""><div class="i-lt"><div class="nm">Катя Голден</div><div class="rl">телеведущая, основательница бьюти бренда</div></div></div><p class="t"><b>Плашка гостя.</b> Белая карточка салфетки, имя шрифтом Marck Script синими чернилами, роль шрифтом Onest.</p></div>
+        <div class="fr rv"><div class="scr anim"><img src="ink_wide.jpg" alt=""><div class="dark" style="background:rgba(8,14,40,.45)"></div><div class="i-num"><div class="v">245 млрд</div><div class="c">выручка «Рольфа» за год</div></div></div><p class="t"><b>Цифра.</b> Marck Script, светящийся синий, как запись на салфетке.</p></div>
       </div>
     </div>
 
@@ -645,7 +654,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
       <h3 class="h3 rv">Как «Чернила» закрывают шесть слабых мест.</h3>
       <div class="fix">
         <div class="rv"><span class="was">Локация<span>Студия без хозяина</span></span><p>Студия построена из образа шоу: белая салфетка и линия синих чернил, имена собеседников на столике.</p></div>
-        <div class="rv"><span class="was">Шрифты<span>Четыре стиля</span></span><p>Два голоса: фирменный шрифт шоу для подписей и рукописные синие чернила для цифр и фраз.</p></div>
+        <div class="rv"><span class="was">Шрифты<span>Четыре стиля</span></span><p>Два шрифта: Onest для логотипа, глав и подписей, Marck Script для имен, цифр и фраз.</p></div>
         <div class="rv"><span class="was">Графика<span>Тетрадь и текст без стиля</span></span><p>Тетрадный лист меняем на салфетку, вся графика держится на синем и белом.</p></div>
         <div class="rv"><span class="was">Голос<span>Тихий закадр</span></span><p>Уверенная подача и звуковой логотип: скрип ручки по бумаге.</p></div>
         <div class="rv"><span class="was">Хук<span>Слабое начало</span></span><p>Выпуск открывается фразой гостя, которая на экране пишется от руки.</p></div>
@@ -655,7 +664,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
 
     <div class="risk rv">
       <div><span class="lab">Бюджет</span><p>Шторы, дорожка, столик, вазоны и свет. Пальмы и кресла можно взять из текущей студии, под гостя меняются только таблички.</p></div>
-      <div><span class="lab">Узнаваемость</span><p>Логотип, шрифт и палитра остаются прежними, зритель узнает шоу с первого кадра.</p></div>
+      <div><span class="lab">Узнаваемость</span><p>Сине белая палитра, бумага и рукописные заметки остаются, логотип получает систему из двух вариантов.</p></div>
     </div>
   </div></section>
 </article>
@@ -667,7 +676,8 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
     <tr><th></th><th class="r">Кольцо</th><th class="p" style="font-family:var(--r-hand);font-weight:700;font-size:30px;letter-spacing:0;text-transform:none;color:#a9bbff">Чернила</th></tr>
     <tr><td>Главная сила</td><td>Статус, драматургия света, вид сверху</td><td>Узнаваемость сохраняется, картинка становится сильнее</td></tr>
     <tr><td>Студия</td><td>Новый сет</td><td>Новый сет из айдентики шоу</td></tr>
-    <tr><td>Айдентика</td><td>Новая графика</td><td>Логотип, шрифт и сине белая палитра остаются</td></tr>
+    <tr><td>Айдентика</td><td>Новая графика, обод и свет фирменного синего</td><td>Сине белая палитра, бумага и рукописные заметки</td></tr>
+    <tr><td>Шрифты</td><td>Unbounded, Onest, Caveat</td><td>Onest ExtraBold и Medium, Marck Script</td></tr>
     <tr><td>Что меняется под гостя</td><td>Покрытие подиума</td><td>Таблички с именами на столике</td></tr>
     <tr><td>Бюджет</td><td>Постройка подиума и кольца</td><td>Шторы, дорожка, столик, свет</td></tr>
     <tr><td>Риск</td><td>Пустота на общем плане</td><td>Камерный свет требует точной расстановки приборов</td></tr>

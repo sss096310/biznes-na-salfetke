@@ -183,10 +183,10 @@
       x.fillStyle='#1d3592';x.textAlign='center';x.textBaseline='alphabetic';x.font='800 138px '+fontS;x.fillText('БИЗНЕС',w/2,400);x.fillText('НА',w/2,540);x.font='170px '+hand;x.fillText('салфетке',w/2,710);
       x.lineWidth=10;x.beginPath();x.moveTo(300,750);x.bezierCurveTo(430,730,600,770,724,740);x.stroke()})}
     const lcMat=new T.MeshBasicMaterial({transparent:true,toneMapped:false,color:0xfff3e2});
-    const lc=new T.Mesh(new T.PlaneGeometry(5.6,1.4),lcMat);lc.position.set(0,3.4,-3.25);scene.add(lc);
+    const lc=new T.Mesh(new T.PlaneGeometry(5.6,1.4),lcMat);lc.position.set(0,2.45,-3.25);scene.add(lc);
     const lbMat=new T.MeshStandardMaterial({transparent:true,roughness:.9});
-    const lb=new T.Mesh(new T.PlaneGeometry(1.9,1.9),lbMat);lb.position.set(0,3.1,-3.25);lb.castShadow=true;scene.add(lb);
-    const lbSpot=new T.SpotLight(0xfff0dc,1.6,8,Math.PI/14,.6,1.2);lbSpot.position.set(0,5.6,-1.2);lbSpot.target.position.set(0,3.1,-3.25);scene.add(lbSpot,lbSpot.target);
+    const lb=new T.Mesh(new T.PlaneGeometry(1.6,1.6),lbMat);lb.position.set(0,2.35,-3.25);lb.castShadow=true;scene.add(lb);
+    const lbSpot=new T.SpotLight(0xfff0dc,1.6,8,Math.PI/14,.6,1.2);lbSpot.position.set(0,5.2,-.6);lbSpot.target.position.set(0,2.35,-3.25);scene.add(lbSpot,lbSpot.target);
     let lt={};function logo(k){lc.visible=k==='C';lb.visible=k==='B';lbSpot.visible=k==='B';if(k==='C'&&!lt.C){lt.C=logoC();lcMat.map=lt.C;lcMat.needsUpdate=true}if(k==='B'&&!lt.B){lt.B=logoB();lbMat.map=lt.B;lbMat.needsUpdate=true}}
     logo(window.INK_LOGO||'C');
     anch.push({p:new T.Vector3(4.4,.02,.35),t:'1'},{p:new T.Vector3(0,.27,.9),t:'2'},{p:new T.Vector3(0,.6,.35),t:'3'},{p:new T.Vector3(3.6,1.6,-1.6),t:'4'},{p:new T.Vector3(-1.6,3.2,-3.9),t:'5'});

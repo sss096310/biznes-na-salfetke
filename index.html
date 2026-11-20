@@ -137,7 +137,7 @@ nav a:hover,nav a:focus-visible{color:var(--fg)}
 .chips button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
 .chips button:focus-visible{outline:2px solid var(--glow);outline-offset:2px}
 .stage-note{max-width:1240px;margin:14px auto 0;color:var(--dim);font-size:13px;text-align:center}
-@media (max-width:700px){.chips.logos{bottom:62px!important}.stage{aspect-ratio:4/5;border-radius:18px}.chips{left:12px;transform:none}.stage .hud{display:none}.stage-note{text-align:left;padding-inline:4px}}
+@media (max-width:700px){.stage{aspect-ratio:4/5;border-radius:18px}.chips{left:12px;transform:none}.stage .hud{display:none}.stage-note{text-align:left;padding-inline:4px}}
 
 .two{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px)}
 .two h3{font-size:clamp(28px,3.2vw,40px);font-weight:700;line-height:1.08}
@@ -554,15 +554,10 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
     <p class="thesis rv"><b>Камерная студия в серых шторах и одна синяя линия чернил через весь кадр.</b> Фирменная сине белая палитра, логотип и рукописные заметки шоу собраны в спокойную симметричную композицию.</p>
   </header>
   <div class="wrap"><div class="stage rv" data-scene="ink" aria-label="3D схема сета Чернила, перетаскивайте для поворота">
-    <div class="chips variants" role="group" aria-label="Записи на полу под гостя">
-      <button type="button" data-v="3" aria-pressed="false"><i style="background:#eeb7a6"></i>Катя Голден</button>
-      <button type="button" data-v="0" aria-pressed="true"><i style="background:#1d3592"></i>Базовый</button>
-      <button type="button" data-v="1" aria-pressed="false"><i style="background:#f29dbd"></i>Frambini</button>
-      <button type="button" data-v="2" aria-pressed="false"><i style="background:#8e8b85"></i>Пулково</button>
-    </div>
+    <div class="chips logos" role="group" aria-label="Логотип на шторах"><button type="button" data-l="C" aria-pressed="true">Лого: линия</button><button type="button" data-l="B" aria-pressed="false">Лого: салфетка</button></div>
     <div class="chips seats" role="group" aria-label="Количество кресел"><button type="button" data-s="2" aria-pressed="true">2 кресла</button><button type="button" data-s="3" aria-pressed="false">3 кресла</button></div>
-    <div class="chips logos" role="group" aria-label="Логотип на шторах" style="top:auto;bottom:14px;left:14px;transform:none"><button type="button" data-l="C" aria-pressed="true">Лого: линия</button><button type="button" data-l="B" aria-pressed="false">Лого: салфетка</button></div>
-  </div><p class="stage-note">Переключайте гостей сверху, логотип слева внизу и число кресел справа внизу. Схему можно вращать. Белые точки отмечают элементы сета, синие камеры.</p></div>
+    <div class="hud"><span><i></i>элементы сета</span><span><i class="c"></i>камеры</span></div>
+  </div><p class="stage-note">Переключайте формат логотипа сверху и число кресел внизу. Схему можно вращать. Белые точки отмечают элементы сета, синие камеры.</p></div>
 
   <section class="wrap" style="padding-top:clamp(64px,9vw,110px)"><div class="in">
     <div class="two">

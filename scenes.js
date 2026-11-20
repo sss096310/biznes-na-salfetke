@@ -172,7 +172,7 @@
     // lights: soft daylight
     const key=new T.SpotLight(0xffcf9a,1.25,14,Math.PI/7,.85,1.2);key.position.set(0,6.5,2.2);key.target.position.set(0,.4,.35);key.castShadow=true;key.shadow.mapSize.set(1536,1536);key.shadow.radius=5;scene.add(key,key.target);
     const face=new T.SpotLight(0xffe2c2,.7,12,Math.PI/9,.8,1.2);face.position.set(0,2.4,6);face.target.position.set(0,1,.35);scene.add(face,face.target);
-    [-4.4,-2.6,2.6,4.4].forEach(x=>{const u=new T.SpotLight(0xffcf9e,1.1,7,Math.PI/9,.9,1.4);u.position.set(x,.1,-3.2);u.target.position.set(x*1.05,3.6,-4);scene.add(u,u.target)});
+    [-4.5,-2.7,-.9,.9,2.7,4.5].forEach(x=>{const u=new T.SpotLight(0xffcf9e,1.05,7,Math.PI/10,.85,1.3);u.position.set(x,.1,-3.5);u.target.position.set(x,3.6,-4.05);scene.add(u,u.target)});
     [-3.6,3.6].forEach(x=>{const pl=new T.SpotLight(0xffe0b8,.8,6,Math.PI/8,.8,1.3);pl.position.set(x,4.5,-.6);pl.target.position.set(x,1,-1.6);scene.add(pl,pl.target)});
     const fontS='"Onest", "Inter", Arial, sans-serif',hand='"Marck Script", Caveat, cursive';
     function logoC(){return cv(2048,512,(x,w,h)=>{x.clearRect(0,0,w,h);x.fillStyle='#5a78ff';x.shadowColor='rgba(70,100,255,1)';x.shadowBlur=36;x.textAlign='center';x.textBaseline='middle';x.font='800 128px '+fontS;try{x.letterSpacing='10px'}catch(e){}
@@ -195,7 +195,7 @@
     function plTex(i){return cv(2048,376,(x,w,h)=>{x.fillStyle='#f4f1ea';x.fillRect(0,0,w,h);x.fillStyle='#1d3592';x.fillRect(w/2-3,40,6,h-80);x.textAlign='center';x.textBaseline='middle';
       x.font='700 150px Caveat, "Comic Sans MS", cursive';x.fillText('Кучмент',w/4,h/2);x.fillText(i===0?'гость':V[i],w*3/4,h/2)})}
     function variant(i){plate.map=cache[i]||(cache[i]=plTex(i));plate.needsUpdate=true}
-    variant(0);
+    variant(3);
     return {variant,logo,third:stt.third,tick(){},settle(){}};
   }
   window.SetScenes={ring,paper,ink};

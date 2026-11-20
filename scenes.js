@@ -175,14 +175,14 @@
     [-2.8,-1,1,2.8].forEach(x=>{const u=new T.SpotLight(0xffcf9e,1.1,7,Math.PI/9,.9,1.4);u.position.set(x,.1,-3.2);u.target.position.set(x*1.05,3.6,-4);scene.add(u,u.target)});
     [-3.6,3.6].forEach(x=>{const pl=new T.SpotLight(0xffe0b8,.8,6,Math.PI/8,.8,1.3);pl.position.set(x,4.5,-.6);pl.target.position.set(x,1,-1.6);scene.add(pl,pl.target)});
     const fontS='"Onest", "Inter", Arial, sans-serif',hand='"Marck Script", Caveat, cursive';
-    function logoC(){return cv(2048,512,(x,w,h)=>{x.clearRect(0,0,w,h);x.fillStyle='#f6f4ef';x.textAlign='center';x.textBaseline='middle';x.font='800 128px '+fontS;try{x.letterSpacing='10px'}catch(e){}
+    function logoC(){return cv(2048,512,(x,w,h)=>{x.clearRect(0,0,w,h);x.fillStyle='#3552e6';x.shadowColor='rgba(70,100,255,.85)';x.shadowBlur=28;x.textAlign='center';x.textBaseline='middle';x.font='800 128px '+fontS;try{x.letterSpacing='10px'}catch(e){}
       x.fillText('БИЗНЕС НА САЛФЕТКЕ',w/2,h*.4);x.fillRect(150,h*.66,w-300,34);x.fillRect(150,h*.66+48,w-300,4)})}
     function logoB(){return cv(1024,1024,(x,w,h)=>{x.clearRect(0,0,w,h);const S=840,r=22,n=Math.round(S/(2*r)),st=S/n,o=(w-S)/2;
       x.fillStyle='#f6f4ef';x.beginPath();x.moveTo(o,o);for(let i=0;i<n;i++)x.arc(o+st*(i+.5),o,st/2,Math.PI,0);for(let i=0;i<n;i++)x.arc(o+S,o+st*(i+.5),st/2,-Math.PI/2,Math.PI/2);for(let i=0;i<n;i++)x.arc(o+S-st*(i+.5),o+S,st/2,0,Math.PI);for(let i=0;i<n;i++)x.arc(o,o+S-st*(i+.5),st/2,Math.PI/2,Math.PI*1.5);x.fill();
       x.strokeStyle='#1d3592';x.lineWidth=5;x.setLineDash([4,22]);x.lineCap='round';x.strokeRect(o+70,o+70,S-140,S-140);x.setLineDash([]);
       x.fillStyle='#1d3592';x.textAlign='center';x.textBaseline='alphabetic';x.font='800 138px '+fontS;x.fillText('БИЗНЕС',w/2,400);x.fillText('НА',w/2,540);x.font='170px '+hand;x.fillText('салфетке',w/2,710);
       x.lineWidth=10;x.beginPath();x.moveTo(300,750);x.bezierCurveTo(430,730,600,770,724,740);x.stroke()})}
-    const lcMat=new T.MeshBasicMaterial({transparent:true,toneMapped:false,color:0xfff3e2});
+    const lcMat=new T.MeshBasicMaterial({transparent:true,toneMapped:false,color:0xffffff});
     const lc=new T.Mesh(new T.PlaneGeometry(5.6,1.4),lcMat);lc.position.set(0,2.45,-3.25);scene.add(lc);
     const lbMat=new T.MeshStandardMaterial({transparent:true,roughness:.9});
     const lb=new T.Mesh(new T.PlaneGeometry(1.6,1.6),lbMat);lb.position.set(0,2.35,-3.25);lb.castShadow=true;scene.add(lb);

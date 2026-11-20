@@ -13,7 +13,7 @@
 <title>Два сета · Бизнес на салфетке</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Unbounded:wght@500;600;700&family=Onest:wght@400;500;600&family=Caveat:wght@600;700&family=Tenor+Sans&family=Manrope:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Unbounded:wght@500;600;700&family=Onest:wght@400;500;600;800&family=Marck+Script&family=Caveat:wght@600;700&family=Tenor+Sans&family=Manrope:wght@400;500;600&display=swap">
 <style>
 :root{
   --bg:#09090a;--bg-2:#131315;--bg-3:#1c1c1f;
@@ -136,7 +136,7 @@ nav a:hover,nav a:focus-visible{color:var(--fg)}
 .chips button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
 .chips button:focus-visible{outline:2px solid var(--glow);outline-offset:2px}
 .stage-note{max-width:1240px;margin:14px auto 0;color:var(--dim);font-size:13px;text-align:center}
-@media (max-width:700px){.stage{aspect-ratio:4/5;border-radius:18px}.chips{left:12px;transform:none}.stage .hud{display:none}.stage-note{text-align:left;padding-inline:4px}}
+@media (max-width:700px){.chips.logos{bottom:62px!important}.stage{aspect-ratio:4/5;border-radius:18px}.chips{left:12px;transform:none}.stage .hud{display:none}.stage-note{text-align:left;padding-inline:4px}}
 
 .two{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px)}
 .two h3{font-size:clamp(28px,3.2vw,40px);font-weight:700;line-height:1.08}
@@ -550,7 +550,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
   <header class="ch-head wrap">
     <div class="n rv">НАПРАВЛЕНИЕ 02</div>
     <h2 class="rv">Чернила</h2>
-    <p class="thesis rv"><b>Светлая студия в серых шторах и одна синяя линия чернил через весь кадр.</b> Фирменная сине белая палитра, логотип и рукописные заметки шоу собраны в спокойную симметричную композицию.</p>
+    <p class="thesis rv"><b>Камерная студия в серых шторах и одна синяя линия чернил через весь кадр.</b> Фирменная сине белая палитра, логотип и рукописные заметки шоу собраны в спокойную симметричную композицию.</p>
   </header>
   <div class="wrap"><div class="stage rv" data-scene="ink" aria-label="3D схема сета Чернила, перетаскивайте для поворота">
     <div class="chips variants" role="group" aria-label="Записи на полу под гостя">
@@ -560,15 +560,15 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
       <button type="button" data-v="2" aria-pressed="false"><i style="background:#8e8b85"></i>Пулково</button>
     </div>
     <div class="chips seats" role="group" aria-label="Количество кресел"><button type="button" data-s="2" aria-pressed="true">2 кресла</button><button type="button" data-s="3" aria-pressed="false">3 кресла</button></div>
-    <div class="hud"><span><i></i>элементы сета</span><span><i class="c"></i>камеры</span></div>
-  </div><p class="stage-note">Переключайте гостей сверху и число кресел внизу. Схему можно вращать. Белые точки отмечают элементы сета, синие камеры.</p></div>
+    <div class="chips logos" role="group" aria-label="Логотип на шторах" style="top:auto;bottom:14px;left:14px;transform:none"><button type="button" data-l="C" aria-pressed="true">Лого: линия</button><button type="button" data-l="B" aria-pressed="false">Лого: салфетка</button></div>
+  </div><p class="stage-note">Переключайте гостей сверху, логотип слева внизу и число кресел справа внизу. Схему можно вращать. Белые точки отмечают элементы сета, синие камеры.</p></div>
 
   <section class="wrap" style="padding-top:clamp(64px,9vw,110px)"><div class="in">
     <div class="two">
       <div><div class="eyebrow rv">Идея</div><h3 class="rv" style="margin-top:14px">Белая салфетка и одна линия синих чернил.</h3></div>
       <div class="prose rv">
         <p>Фирменные цвета шоу синий и белый. Самое знакомое всем сочетание синего и белого это линия шариковой ручки на салфетке. <b>Студия становится белой салфеткой, через которую проходит одна синяя линия: дорожка цвета чернил, на которой стоят кресла.</b></p>
-        <p>Комната светлая: серые шторы с мягкими складками по кругу, светлый пол, мягкий дневной свет. Композиция строго симметричная, как в кадре шахматного поединка: два кресла лицом друг к другу, между ними столик с именами собеседников. Пальмы из текущей студии остаются, но переезжают в белые вазоны по краям кадра.</p>
+        <p>Комната в полумраке: серые шторы с мягкими складками по кругу, на них теплые пятна подсветки снизу. Теплый верхний свет собирает собеседников в одно пятно, как в кабинете поздно вечером. Композиция строго симметричная, как в кадре шахматного поединка: два кресла лицом друг к другу, между ними столик с именами собеседников. Пальмы из текущей студии остаются, но переезжают в белые вазоны по краям кадра.</p>
         <p>Синий в кадре только один и глубокий, цвета чернил. Он работает акцентом на белом и не превращает студию в синюю комнату, поэтому не напоминает ВК.</p>
       </div>
     </div>
@@ -581,8 +581,23 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
         <div class="rv"><i>2</i><div><h4>Таблички с именами</h4><p>На передней грани столика имена Михаила и гостя синими чернилами. Меняются под каждого гостя и сразу представляют собеседников.</p></div></div>
         <div class="rv"><i>3</i><div><h4>Столик и салфетница</h4><p>Низкий белый столик, латунная салфетница с салфетками и синяя ручка.</p></div></div>
         <div class="rv"><i>4</i><div><h4>Пальмы в белых вазонах</h4><p>Знакомые зрителю пальмы стоят симметрично по краям и держат баланс кадра.</p></div></div>
-        <div class="rv"><i>5</i><div><h4>Серые шторы</h4><p>Складки в нескольких оттенках серого по кругу, светлый пол. Логотип шоу появляется в графике и на салфетнице.</p></div></div>
+        <div class="rv"><i>5</i><div><h4>Серые шторы и логотип</h4><p>Складки в нескольких оттенках серого, теплая подсветка снизу. Над собеседниками логотип шоу: светящаяся надпись с линией или салфетка с тиснением в луче прожектора.</p></div></div>
         <div class="rv"><i class="c">A</i><div><h4>Камеры</h4><p>A общий симметричный план, B и C крупные планы, D сверху на дорожку и столик, E вертикаль для shorts.</p></div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="eyebrow rv">Логотип</div>
+      <h3 class="h3 rv">Два варианта логотипа на шторах.</h3>
+      <div class="gal">
+        <figure class="rv"><img src="logo_Cw.jpg" alt="Логотип линия чернил на белом"><figcaption><b>Линия чернил.</b> Название заглавными и синяя линия, как дорожка в студии.</figcaption></figure>
+        <figure class="rv"><img src="logo_Cb.jpg" alt="Логотип линия чернил на синем"><figcaption><b>Линия чернил на синем.</b> Светящаяся надпись над собеседниками.</figcaption></figure>
+        <figure class="rv"><img src="ink_kg.jpg" alt="Логотип линия на шторах студии"><figcaption><b>В студии.</b> Надпись светится над креслами.</figcaption></figure>
+        <figure class="rv"><img src="ink_wide.jpg" alt="Общий план с логотипом линия"><figcaption><b>Общий план.</b> Логотип, синяя дорожка и пятно теплого света.</figcaption></figure>
+        <figure class="rv"><img src="logo_Bw.jpg" alt="Логотип салфетка на белом"><figcaption><b>Салфетка.</b> Волнистый край, тиснение, «салфетке» от руки.</figcaption></figure>
+        <figure class="rv"><img src="logo_Bb.jpg" alt="Логотип салфетка на синем"><figcaption><b>Салфетка на синем.</b> Работает как аватар канала.</figcaption></figure>
+        <figure class="rv"><img src="ink_kg_b.jpg" alt="Логотип салфетка на шторах студии"><figcaption><b>В студии.</b> Панель салфетка висит на шторах в луче прожектора.</figcaption></figure>
+        <figure class="rv"><img src="ink_wide_b.jpg" alt="Общий план с логотипом салфетка"><figcaption><b>Общий план.</b> Логотип салфетка над собеседниками.</figcaption></figure>
       </div>
     </div>
 
@@ -590,7 +605,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
       <div class="eyebrow rv">Под каждого гостя</div>
       <h3 class="h3 rv">Студия та же, имена на столике новые.</h3>
       <div class="gal">
-        <figure class="rv"><img src="ink_wide.jpg" alt="Светлая студия с синей дорожкой"><figcaption><b>Общий план.</b> Синяя дорожка через светлую студию.</figcaption></figure>
+        <figure class="rv"><img src="ink_wide.jpg" alt="Студия с синей дорожкой"><figcaption><b>Общий план.</b> Синяя дорожка через камерную студию.</figcaption></figure>
         <figure class="rv"><img src="ink_top.jpg" alt="Вид сверху на синюю дорожку"><figcaption><b>Вид сверху.</b> Линия чернил, кресла и столик, готовая обложка.</figcaption></figure>
         <figure class="rv"><img src="ink_kg.jpg" alt="Студия Чернила в выпуске с Катей Голден"><figcaption><b>Катя Голден.</b> Симметричный общий план, имена на столике.</figcaption></figure>
         <figure class="rv"><img src="ink_two.jpg" alt="Столик с табличками имен"><figcaption><b>Frambini.</b> Таблички с именами крупно.</figcaption></figure>
@@ -610,7 +625,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
       <div class="eyebrow rv">Как идет выпуск</div>
       <div class="flow">
         <div class="rv"><span class="t">00:00</span><h4>Фраза гостя</h4><p>Выпуск открывается главной фразой гостя. На экране она появляется синими чернилами, как запись от руки.</p></div>
-        <div class="rv"><span class="t">00:08</span><h4>Разговор</h4><p>Собеседники на синей дорожке в симметричном светлом кадре.</p></div>
+        <div class="rv"><span class="t">00:08</span><h4>Разговор</h4><p>Собеседники на синей дорожке в пятне теплого света, над ними логотип.</p></div>
         <div class="rv"><span class="t">Цифры</span><h4>Запись на салфетке</h4><p>Михаил записывает цифру, камера сверху показывает ее крупно.</p></div>
         <div class="rv"><span class="t">Финал</span><h4>Салфетка на стену</h4><p>Гость подписывает салфетку с тремя факторами успеха, и она отправляется в раму на стене.</p></div>
       </div>
@@ -655,7 +670,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
     <tr><td>Айдентика</td><td>Новая графика</td><td>Логотип, шрифт и сине белая палитра остаются</td></tr>
     <tr><td>Что меняется под гостя</td><td>Покрытие подиума</td><td>Таблички с именами на столике</td></tr>
     <tr><td>Бюджет</td><td>Постройка подиума и кольца</td><td>Шторы, дорожка, столик, свет</td></tr>
-    <tr><td>Риск</td><td>Пустота на общем плане</td><td>Светлый кадр требует аккуратного света на лицах</td></tr>
+    <tr><td>Риск</td><td>Пустота на общем плане</td><td>Камерный свет требует точной расстановки приборов</td></tr>
   </table></div>
 </div></section>
 
@@ -692,7 +707,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
   const fio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('play');void e.target.offsetWidth;e.target.classList.add('play')}}),{threshold:.55});
   document.querySelectorAll('.scr.anim').forEach(el=>fio.observe(el));
 
-  try{await Promise.race([Promise.all([document.fonts.load('40px "Tenor Sans"'),document.fonts.load('700 40px Caveat','Кучмент Frambini')]),new Promise(r=>setTimeout(r,2500))])}catch(e){}
+  try{await Promise.race([Promise.all([document.fonts.load('40px "Tenor Sans"'),document.fonts.load('700 40px Caveat','Кучмент Frambini'),document.fonts.load('40px "Marck Script"','салфетке'),document.fonts.load('800 40px Onest','БИЗНЕС')]),new Promise(r=>setTimeout(r,2500))])}catch(e){}
   const stages=[...document.querySelectorAll('.stage')];
   if(!window.THREE||!window.SetScenes){stages.forEach(s=>{const f=document.createElement('div');f.className='fallback';f.textContent='3D схема загрузится при подключении к интернету';s.appendChild(f)});return}
   const T=THREE,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -712,6 +727,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
     if(start)api.variant(+start.dataset.v,false);
     api.onAuto&&api.onAuto(press);
     vb.forEach(b=>b.addEventListener('click',()=>{press(+b.dataset.v);api.variant(+b.dataset.v,true)}));
+    const lbt=[...stage.querySelectorAll('.logos button')];lbt.forEach(b=>b.addEventListener('click',()=>{lbt.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));api.logo&&api.logo(b.dataset.l)}));
     const sb=[...stage.querySelectorAll('.seats button')];
     const sStart=sb.find(b=>b.getAttribute('aria-pressed')==='true');api.third(!!sStart&&sStart.dataset.s==='3');
     sb.forEach(b=>b.addEventListener('click',()=>{sb.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));api.third(b.dataset.s==='3')}));

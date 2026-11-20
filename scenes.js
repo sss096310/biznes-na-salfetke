@@ -143,10 +143,10 @@
     scene.add(new T.HemisphereLight(0xfffaf2,0xb9b0a2,.18));
     const floor=add(scene,new T.PlaneGeometry(40,40),M(0xd8d2c7,{r:.85}),0,0,0,false);floor.rotation.x=-Math.PI/2;
     // curtains around: warm white folds
-    const cur=M(0xd3c9b8,{r:.95});[-1,1].forEach(sd=>{const sp=add(scene,new T.PlaneGeometry(10,5.2),cur,sd*6.6,2.6,0,false);sp.rotation.y=-sd*Math.PI/2});
+    const cur=M(0x8d9096,{r:.95}),cur2=M(0x7d8087,{r:.95}),cur3=M(0x9a9da3,{r:.95});[-1,1].forEach(sd=>{const sp=add(scene,new T.PlaneGeometry(10,5.2),cur,sd*6.6,2.6,0,false);sp.rotation.y=-sd*Math.PI/2});
     const N=70,R=5.2;for(let i=0;i<N;i++){const th=Math.PI*.18+i/(N-1)*Math.PI*.64;const x=Math.cos(th)*R*1.35,z=-Math.sin(th)*R*.75;
-      const m=add(scene,new T.CylinderGeometry(.13,.13,5.2,10,1,false,0,Math.PI),cur,x,2.6,z,false);m.rotation.y=-th+Math.PI/2}
-    add(scene,new T.PlaneGeometry(16,5.2),cur,0,2.6,-4.05,false);
+      const m=add(scene,new T.CylinderGeometry(.13,.13,5.2,10,1,false,0,Math.PI),[cur,cur2,cur3][i%3],x,2.6,z,false);m.rotation.y=-th+Math.PI/2}
+    add(scene,new T.PlaneGeometry(16,5.2),cur2,0,2.6,-4.05,false);
     // blue runner: ink line across the floor
     const runMat=M(0x0c1a66,{r:.95});
     const run=add(scene,new T.PlaneGeometry(14,1.5),runMat,0,.012,.35,false);run.rotation.x=-Math.PI/2;

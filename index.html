@@ -302,7 +302,7 @@ nav a:hover,nav a:focus-visible{color:var(--fg)}
   .cmp td:first-child{grid-column:1/-1;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
   .cmp td:nth-child(2)::before,.cmp td:nth-child(3)::before{display:block;color:var(--fg);font-size:14px;margin-bottom:4px}
   .cmp td:nth-child(2)::before{content:"Кольцо";font-family:var(--r-disp);font-weight:600}
-  .cmp td:nth-child(3)::before{content:"Салфетка";font-family:var(--p-disp);letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+  .cmp td:nth-child(3)::before{content:"Чернила";font-family:var(--r-hand);font-weight:700;font-size:18px;color:#a9bbff}
 }
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:56px}
 .steps div{background:var(--bg-2);border-radius:20px;padding:28px 24px;min-width:0}
@@ -320,7 +320,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
 
 </head>
 <body>
-<nav class="wrap"><div class="in"><b>Бизнес на салфетке</b><div class="links"><a href="#context">Исследование</a><a href="#ring">Кольцо</a><a href="#paper">Салфетка</a><a href="#compare">Сравнение</a></div></div></nav>
+<nav class="wrap"><div class="in"><b>Бизнес на салфетке</b><div class="links"><a href="#context">Исследование</a><a href="#ring">Кольцо</a><a href="#ink">Чернила</a><a href="#compare">Сравнение</a></div></div></nav>
 
 <header class="hero wrap">
   <svg class="hring" viewBox="0 0 560 170" aria-hidden="true">
@@ -378,18 +378,18 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
   <p class="lead rv">В обеих концепциях Михаил и гость сидят в креслах лицом к камере, между ними журнальный столик с фирменной салфетницей шоу. Третье кресло стоит наготове для второго гостя. <b>Под каждый выпуск меняется то, что окружает разговор.</b></p>
   <div class="idx">
     <a class="rv" href="#ring"><img src="ring_kg.jpg" alt=""><span class="n">01</span><h3 style="font-family:var(--r-disp);font-weight:600">Кольцо</h3><p>Кольцо света над круглым подиумом, покрытие подиума меняется под гостя.</p></a>
-    <a class="rv" href="#paper"><img src="paper_kg.jpg" alt=""><span class="n">02</span><h3 style="font-family:var(--p-disp);font-weight:400;font-size:36px;letter-spacing:.12em;text-transform:uppercase">Салфетка</h3><p>Зал из бумажных складок, который светится цветом гостя.</p></a>
+    <a class="rv" href="#ink"><img src="studio.jpg" alt="" style="filter:brightness(.7) saturate(.8)"><span class="n">02</span><h3 style="font-family:var(--r-hand);font-weight:700;font-size:56px;color:#a9bbff">Чернила</h3><p>Текущая студия: фирменный синий становится цветом чернил, на стене подписанные салфетки гостей.</p></a>
   </div>
   <div class="two block">
     <div><div class="eyebrow rv">Общий предмет</div><h3 class="rv" style="margin-top:14px">Салфетница шоу.</h3></div>
     <div class="prose rv">
-      <p>На столике в обоих сетах стоит авторская салфетница: латунная лента толщиной 5 мм, изогнутая в две арки разной высоты, как сложенная салфетка. Салфетки стоят между арками вертикально. На правой опоре выгравировано «Бизнес на салфетке», на левой номер экземпляра. Форма опирается на скульптурные салфетницы Mukul Goyal и предметы Ferm Living.</p>
+      <p>На столике в обоих вариантах стоит авторская салфетница: латунная лента толщиной 5 мм, изогнутая в две арки разной высоты, как сложенная салфетка. Салфетки стоят между арками вертикально. На правой опоре выгравировано «Бизнес на салфетке», на левой номер экземпляра. Форма опирается на скульптурные салфетницы Mukul Goyal и предметы Ferm Living.</p>
       <p>Салфетница становится предметом шоу. Михаил достает из нее салфетку, когда просит гостя записать цифру или три фактора успеха. <b>Каждый гость получает в подарок свой экземпляр с номером выпуска.</b></p>
     </div>
   </div>
   <div class="gal">
     <figure class="rv"><img src="holder_ring.jpg" alt="Салфетница из изогнутой латунной ленты на темном столике"><figcaption><b>В сете Кольцо.</b> Полированная латунь под теплым светом, рядом салфетка с цифрой.</figcaption></figure>
-    <figure class="rv"><img src="holder_paper.jpg" alt="Латунная салфетница на светлом столике"><figcaption><b>В сете Салфетка.</b> Та же салфетница на светлом столике.</figcaption></figure>
+    <figure class="rv"><img src="holder_paper.jpg" alt="Латунная салфетница на светлом столике"><figcaption><b>В текущей студии.</b> Та же салфетница на светлом столике.</figcaption></figure>
     <figure class="rv"><img src="holder_engrave.jpg" alt="Гравировка Бизнес на салфетке на латуни"><figcaption><b>Гравировка.</b> Название шоу шрифтом Tenor Sans на опоре.</figcaption></figure>
     <figure class="rv"><img src="holder_end.jpg" alt="Силуэт салфетницы спереди"><figcaption><b>Силуэт.</b> Две арки разной высоты, салфетки стоят между ними.</figcaption></figure>
   </div>
@@ -523,129 +523,113 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
   </div></section>
 </article>
 
-<!-- 02 PAPER -->
-<article id="paper">
+<!-- 02 INK -->
+<style>
+#ink{--ink:#1d3592;--ink-deep:#101d52;--sheet:#f4f1ea}
+#ink .ch-head h2{font-family:var(--r-hand);font-weight:700;color:#8fa6ff;letter-spacing:0;font-size:clamp(80px,16vw,200px)}
+.ink-scene{position:relative;margin:clamp(40px,6vw,64px) auto 0;max-width:1240px;border-radius:24px;overflow:hidden;container-type:inline-size;background:#000}
+.ink-scene img{display:block;width:100%;max-width:100%;aspect-ratio:16/9;object-fit:cover;filter:saturate(.75) brightness(.72)}
+.ink-scene .tint{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(40,70,190,.55),rgba(10,18,60,.35) 55%,transparent 80%);mix-blend-mode:screen}
+.ink-scene .pt{position:absolute;transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;background:var(--fg);color:var(--bg);font:700 13px var(--display);display:grid;place-items:center;box-shadow:0 0 0 6px rgba(245,245,247,.16)}
+.ink-scene .tag{position:absolute;left:16px;bottom:14px;font-size:12px;color:#c9d3ff;background:rgba(10,16,48,.7);padding:6px 12px;border-radius:999px}
+@media (max-width:700px){.ink-scene .tag{display:none}.ink-scene{border-radius:18px}.ink-scene .pt{width:22px;height:22px;font-size:11px}}
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:36px}
+.vs div{border-radius:20px;padding:26px 24px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.vs i{display:block;height:90px;border-radius:14px}
+.vs h4{font-size:18px;font-weight:600}.vs p{font-size:15px;color:var(--mut)}
+@media (max-width:700px){.vs{grid-template-columns:1fr}}
+.i-lt{position:absolute;left:5cqw;bottom:6cqw;background:var(--sheet);color:var(--ink-deep);padding:2.2cqw 3.2cqw;border-radius:.5cqw;transform:rotate(-1.5deg);box-shadow:0 1.5cqw 3cqw rgba(0,0,0,.4)}
+.i-lt .nm{font:700 4.6cqw/1 var(--r-hand);color:var(--ink)}
+.i-lt .rl{font:500 1.8cqw var(--text);color:#3b4370;margin-top:.8cqw}
+.i-num{position:absolute;right:6cqw;top:9cqw;text-align:right}
+.i-num .v{font:700 11cqw/.9 var(--r-hand);color:#a9bbff;text-shadow:0 0 24px rgba(80,110,255,.45)}
+.i-num .c{font:500 1.9cqw var(--text);color:#dfe5ff;margin-top:1cqw}
+@container (max-width:520px){.i-lt .rl,.i-num .c{font-size:3cqw}}
+</style>
+<article id="ink">
   <header class="ch-head wrap">
     <div class="n rv">НАПРАВЛЕНИЕ 02</div>
-    <h2 class="rv">Салфетка</h2>
-    <p class="thesis rv"><b>Зал из бумажных складок, который светится изнутри.</b> Свет за бумагой каждый раз окрашивает комнату в цвет гостя.</p>
+    <h2 class="rv">Чернила</h2>
+    <p class="thesis rv"><b>Студия остается, фирменный синий становится цветом чернил.</b> Сохраняем логотип, шрифт, сине белую палитру и бумажную концепцию. Меняем свет, декор и графику.</p>
   </header>
-  <div class="wrap"><div class="stage rv" data-scene="paper" aria-label="3D схема сета Салфетка, перетаскивайте для поворота">
-    <div class="chips variants" role="group" aria-label="Цвет света и знак на панели под гостя">
-      <button type="button" data-v="3" aria-pressed="false"><i style="background:#eeb7a6"></i>Катя Голден</button>
-      <button type="button" data-v="0" aria-pressed="true"><i style="background:#f6e2c0"></i>Базовый</button>
-      <button type="button" data-v="1" aria-pressed="false"><i style="background:#f59ac0"></i>Frambini</button>
-      <button type="button" data-v="2" aria-pressed="false"><i style="background:#f0645a"></i>М.Видео</button>
-    </div>
-    <div class="chips seats" role="group" aria-label="Количество кресел"><button type="button" data-s="2" aria-pressed="true">2 кресла</button><button type="button" data-s="3" aria-pressed="false">3 кресла</button></div>
-    <div class="hud"><span><i></i>элементы сета</span><span><i class="c"></i>камеры</span></div>
-  </div><p class="stage-note">Цвет комнаты и знак на панели меняются сами. Выберите гостя, чтобы остановить на нем. Белые точки отмечают элементы сета, синие камеры.</p></div>
+  <div class="wrap"><div class="ink-scene rv">
+    <img src="studio.jpg" alt="Текущая студия шоу в синем свете">
+    <div class="tint"></div>
+    <span class="pt" style="left:50%;top:14%">1</span>
+    <span class="pt" style="left:18%;top:30%">2</span>
+    <span class="pt" style="left:50%;top:78%">3</span>
+    <span class="pt" style="left:82%;top:40%">4</span>
+    <span class="pt" style="left:30%;top:62%">5</span>
+    <span class="tag">Набросок на кадре текущей студии</span>
+  </div><p class="stage-note">Точки на кадре совпадают с номерами в списке ниже.</p></div>
 
   <section class="wrap" style="padding-top:clamp(64px,9vw,110px)"><div class="in">
     <div class="two">
-      <div><div class="eyebrow rv">Идея</div><h3 class="rv" style="margin-top:14px">Салфетка на просвет размером с комнату.</h3></div>
+      <div><div class="eyebrow rv">Идея</div><h3 class="rv" style="margin-top:14px">Синий цвет шоу превращается в цвет шариковой ручки.</h3></div>
       <div class="prose rv">
-        <p>Стены зала собраны из плотной белой бумаги, уложенной округлыми складками, как на поварском колпаке. Свет стоит за бумагой, и комната светится изнутри, как салфетка, если посмотреть ее на просвет.</p>
-        <p><b>Под каждого гостя меняются цвет света и знак на панели в центре стены.</b> Знак выдавлен в бумаге без краски: название компании гостя или название шоу. Для Frambini комната розовая, для М.Видео красная, для Кати Голден пудровая.</p>
-        <p>Сет работает как музейная инсталляция, в духе световых пространств Джеймса Таррелла. В бизнес подкастах такого кадра нет, а название шоу зритель видит буквально.</p>
+        <p>Главный предмет шоу уже есть: салфетка, на которой гость пишет от руки. Самые знакомые всем синие на белом это чернила шариковой ручки. <b>Фирменная сине белая палитра шоу остается и получает понятный зрителю смысл: синие чернила на белой салфетке.</b></p>
+        <p>Мебель, планировку и логотип мы сохраняем. Студия уходит в полумрак, лица освещает теплый свет, фон получает глубокий синий свет цвета чернил. Стену за собеседниками занимают салфетки, подписанные гостями прошлых выпусков.</p>
+        <p>Работы немного: свет, рамы, несколько предметов и обновленная графика. Перестройка студии не нужна.</p>
       </div>
     </div>
 
     <div class="block">
-      <div class="eyebrow rv">Почему сработает</div>
-      <div class="why">
-        <div class="rv"><h4>Прямо про название</h4><p>Зритель видит салфетку буквально. Связь с шоу считывается без объяснений.</p><small>Айдентика шоу</small></div>
-        <div class="rv"><h4>Лента как палитра</h4><p>Превью каждого выпуска узнается по белым складкам и отличается цветом гостя.</p><small>Сильный кадр для ленты и shorts</small></div>
-        <div class="rv"><h4>Статус галереи</h4><p>В кадре нет лишних предметов. Темные кресла на светлом фоне держат фигуры собеседников.</p><small>Премиальная аудитория</small></div>
-      </div>
-    </div>
-
-    <div class="block">
-      <div class="eyebrow rv">Устройство сета</div>
-      <h3 class="h3 rv">Номера совпадают с точками на 3D схеме.</h3>
+      <div class="eyebrow rv">Что меняем</div>
+      <h3 class="h3 rv">Пять точечных усилений.</h3>
       <div class="legend">
-        <div class="rv"><i>1</i><div><h4>Бумажные складки</h4><p>Стены высотой около 4 м, бумага уложена округлыми складками внахлест. Полукругом обнимают зону разговора.</p></div></div>
-        <div class="rv"><i>2</i><div><h4>Свет за бумагой</h4><p>Светодиодные панели за складками. Цвет задается под гостя, боковой свет рисует тени складок.</p></div></div>
-        <div class="rv"><i>3</i><div><h4>Панель со знаком</h4><p>Квадрат плотной бумаги в центре стены. Знак гостя выдавлен тиснением, без краски.</p></div></div>
-        <div class="rv"><i>4</i><div><h4>Кресла и столик</h4><p>Темные кресла развернуты друг к другу и к камере, третье стоит у стены. На столике латунная салфетница шоу.</p></div></div>
-        <div class="rv"><i>5</i><div><h4>Светлый пол и ковер</h4><p>Матовое покрытие продолжает бумагу, ковер собирает зону разговора.</p></div></div>
-        <div class="rv"><i class="c">A</i><div><h4>Камеры</h4><p>A общий план, B и C крупные планы, D сверху, E вертикаль.</p></div></div>
+        <div class="rv"><i>1</i><div><h4>Свет</h4><p>Теплый рисующий свет на лица, глубокий синий контровой свет на фон. Студия выглядит дороже без новой мебели.</p></div></div>
+        <div class="rv"><i>2</i><div><h4>Стена салфеток</h4><p>Подписанные гостями салфетки в одинаковых рамах. С каждым выпуском стена растет и превращается в архив шоу.</p></div></div>
+        <div class="rv"><i>3</i><div><h4>Столик и салфетница</h4><p>Латунная салфетница с гравировкой и синяя ручка рядом. Михаил достает салфетку, когда просит гостя записать цифру.</p></div></div>
+        <div class="rv"><i>4</i><div><h4>Синий акцент в декоре</h4><p>Кобальтовое стекло или керамика на полках, глубокий синий текстиль. Оттенок чернил, глубже и темнее интерфейсного синего.</p></div></div>
+        <div class="rv"><i>5</i><div><h4>Подсветка логотипа</h4><p>Фирменный логотип остается на месте и получает мягкую синюю подсветку.</p></div></div>
+        <div class="rv"><i class="c">A</i><div><h4>Камеры</h4><p>Добавляем камеру сверху на столик, чтобы показывать запись на салфетке крупно.</p></div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="eyebrow rv">Синий без сходства с ВК</div>
+      <h3 class="h3 rv">Чернильный синий глубже и темнее.</h3>
+      <div class="vs">
+        <div class="rv" style="background:var(--bg-3)"><i style="background:#0077ff"></i><h4>Интерфейсный синий</h4><p>Яркий, плоский, холодный. Так выглядят ВК и банковские приложения. Этот оттенок в студии не используем.</p></div>
+        <div class="rv" style="background:var(--bg-3)"><i style="background:linear-gradient(135deg,#1d3592,#101d52)"></i><h4>Синие чернила</h4><p>Глубокий кобальт с фиолетовым подтоном, всегда рядом с белой бумагой и теплым светом. Так он читается как ручка и салфетка.</p></div>
       </div>
     </div>
 
     <div class="block">
       <div class="eyebrow rv">Как идет выпуск</div>
       <div class="flow">
-        <div class="rv"><span class="t">00:00</span><h4>Белая комната</h4><p>Зал белый. Шорох бумаги, свет за складками уходит в цвет гостя, гость произносит главную фразу.</p></div>
-        <div class="rv"><span class="t">00:08</span><h4>Разговор</h4><p>Собеседники в креслах в центре светящейся комнаты.</p></div>
-        <div class="rv"><span class="t">Цифры</span><h4>Цифра на бумаге</h4><p>Ключевая цифра появляется на экране крупно, в цвете гостя, на фоне складок.</p></div>
-        <div class="rv"><span class="t">Финал</span><h4>Салфетка</h4><p>Гость пишет три фактора успеха и подписывает салфетку. Свет возвращается в белый.</p></div>
+        <div class="rv"><span class="t">00:00</span><h4>Фраза гостя</h4><p>Выпуск открывается главной фразой гостя. На экране она появляется синими чернилами, как запись от руки.</p></div>
+        <div class="rv"><span class="t">00:08</span><h4>Разговор</h4><p>Собеседники в знакомых креслах, за ними стена подписанных салфеток.</p></div>
+        <div class="rv"><span class="t">Цифры</span><h4>Запись на салфетке</h4><p>Михаил записывает цифру, камера сверху показывает ее крупно.</p></div>
+        <div class="rv"><span class="t">Финал</span><h4>Салфетка на стену</h4><p>Гость подписывает салфетку с тремя факторами успеха, и она отправляется в раму на стене.</p></div>
       </div>
     </div>
 
     <div class="block">
-      <div class="eyebrow rv">Под каждого гостя</div>
-      <h3 class="h3 rv">Одна комната, разный свет.</h3>
-      <div class="gal">
-        <figure class="rv"><img src="paper_base.jpg" alt="Белая комната из складок"><figcaption><b>Базовый.</b> Теплый белый, знак шоу на панели.</figcaption></figure>
-        <figure class="rv"><img src="paper_frambini.jpg" alt="Комната в розовом свете"><figcaption><b>Frambini.</b> Розовый свет, название бренда тиснением.</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="block">
-      <span class="badge rv">Пилот</span>
-      <h3 class="h3 rv">Выпуск с Катей Голден: пудровая комната.</h3>
-      <div class="case">
-        <div class="imgs rv"><img src="paper_kg.jpg" alt="Комната в пудровом свете"><img src="paper_kg_two.jpg" alt="Кресла и столик в пудровой комнате"></div>
-        <ul class="rv">
-          <li><h4>Пудровый свет</h4><p>Свет за складками в нюдовом тоне. Комната выглядит как упаковка дорогой косметики.</p></li>
-          <li><h4>Знак шоу</h4><p>На панели в центре стены тиснение «Бизнес на салфетке». Без краски, только рельеф бумаги.</p></li>
-          <li><h4>Три кресла</h4><p>Третье кресло для Стаса, если Катя придет с мужем.</p></li>
-          <li><h4>Графика</h4><p>Плашки и цифры выпуска получают пудровый акцент, шрифты остаются фирменными.</p></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="block">
-      <div class="eyebrow rv">Мини брендбук</div>
-      <h3 class="h3 rv">Графика из бумаги и чернил.</h3>
-      <div class="bb">
-        <div class="bb-row">
-          <div class="spec rv"><span class="aa" style="font-family:var(--p-disp);font-weight:400;letter-spacing:.08em">АА</span><span class="nm">Tenor Sans</span><p>Имена, главы, обложки. Только заглавные с широкой разрядкой, как подписи в галерее.</p></div>
-          <div class="spec rv"><span class="aa" style="font-family:var(--p-text);font-weight:500">Аа</span><span class="nm">Manrope</span><p>Роли, подписи, субтитры. Спокойный гротеск, хорошо читается мелко.</p></div>
-          <div class="spec rv"><span class="aa" style="font-family:var(--p-disp);font-weight:400;color:#e7a3b8">245</span><span class="nm">Tenor Sans</span><p>Цифры крупно, в цвете гостя.</p></div>
-        </div>
-        <div class="spec rv"><span class="nm">Палитра</span><div class="pal"><span><i style="background:#f6f1e7"></i>Бумага #F6F1E7</span><span><i style="background:#1f1b16"></i>Чернила #1F1B16</span><span><i style="background:#d9cfbf"></i>Складка #D9CFBF</span><span><i style="background:#eeb7a6"></i>Пудра, гость</span><span><i style="background:#f59ac0"></i>Frambini, гость</span></div><p>Цвет гостя повторяет свет комнаты и появляется в плашке тонкой полосой.</p></div>
-      </div>
+      <div class="eyebrow rv">Графика</div>
+      <h3 class="h3 rv">Фирменный шрифт и логотип плюс рукописные чернила.</h3>
       <div class="frames">
-        <div class="fr rv"><div class="scr anim"><img src="paper_kg_two.jpg" alt=""><div class="p-lt"><div class="bar"></div><div><div class="nm">Катя Голден</div><div class="rl">телеведущая, основательница бьюти бренда</div></div></div></div><p class="t"><b>Плашка гостя.</b> Бумажная карточка с волнистым краем салфетки раскрывается сверху вниз.</p></div>
-        <div class="fr rv"><div class="scr anim"><img src="paper_kg.jpg" alt=""><div class="dark" style="background:rgba(246,241,231,.55)"></div><div class="p-ch"><div><div class="k">Глава вторая</div><div class="h">С чего начинали</div><div class="line"></div></div></div></div><p class="t"><b>Глава.</b> Заглавные с разрядкой на бумаге, тонкая линия в цвете гостя.</p></div>
-        <div class="fr rv"><div class="scr anim"><img src="paper_frambini.jpg" alt=""><div class="dark" style="background:rgba(246,241,231,.6)"></div><div class="p-num"><div class="v">245</div><div class="c">млрд рублей выручки «Рольфа» за год</div></div></div><p class="t"><b>Цифра.</b> Крупно, в цвете гостя, подпись Manrope.</p></div>
-        <div class="fr rv"><div class="scr anim"><img src="paper_kg.jpg" alt=""><div class="p-th"><div class="brand">Бизнес на салфетке</div><div class="h">Катя<br>Голден</div><div class="s">фраза из выпуска</div></div></div><p class="t"><b>Обложка.</b> Комната гостя, имя гостя заглавными, фраза из выпуска.</p></div>
-      </div>
-      <div class="why" style="margin-top:16px">
-        <div class="rv"><h4>Звуковой логотип</h4><p>Шорох бумаги и короткий скрип ручки. Звучит на старте, при смене глав и в финале на подписи салфетки.</p></div>
-        <div class="rv"><h4>Голос</h4><p>Голос Михаила, камерная подача близко к микрофону, уверенный темп.</p></div>
-        <div class="rv"><h4>Субтитры</h4><p>Manrope цвета чернил на полупрозрачной бумажной подложке, нижняя треть кадра.</p></div>
+        <div class="fr rv"><div class="scr anim"><img src="studio.jpg" alt="" style="filter:brightness(.7) saturate(.8)"><div class="i-lt"><div class="nm">Катя Голден</div><div class="rl">телеведущая, основательница бьюти бренда</div></div></div><p class="t"><b>Плашка гостя.</b> Белая карточка салфетки, имя синими чернилами, роль фирменным шрифтом.</p></div>
+        <div class="fr rv"><div class="scr anim"><img src="studio.jpg" alt="" style="filter:brightness(.55) saturate(.7)"><div class="dark" style="background:rgba(16,29,82,.45)"></div><div class="i-num"><div class="v">245 млрд</div><div class="c">выручка «Рольфа» за год</div></div></div><p class="t"><b>Цифра.</b> Почерком синими чернилами, как на салфетке.</p></div>
       </div>
     </div>
 
     <div class="block">
       <div class="eyebrow rv">Ответ на разбор</div>
-      <h3 class="h3 rv">Как «Салфетка» закрывает шесть слабых мест.</h3>
+      <h3 class="h3 rv">Как «Чернила» закрывают шесть слабых мест.</h3>
       <div class="fix">
-        <div class="rv"><span class="was">Локация<span>Студия без хозяина</span></span><p>Комната окрашивается в цвет гостя, его знак выдавлен в стене. <em>Название шоу превращается в пространство.</em></p></div>
-        <div class="rv"><span class="was">Шрифты<span>Четыре стиля</span></span><p>Два шрифта на все шоу: Tenor Sans для имен, глав и цифр, Manrope для подписей и субтитров.</p></div>
-        <div class="rv"><span class="was">Графика<span>Тетрадь и текст без стиля</span></span><p>Вместо тетрадного листа фактура салфетки: волнистый край, бумага, тиснение. Логотип гостя переходит в тиснение на стене.</p></div>
-        <div class="rv"><span class="was">Голос<span>Тихий закадр</span></span><p>Уверенная камерная подача и звуковой логотип с шорохом бумаги и скрипом ручки.</p></div>
-        <div class="rv"><span class="was">Хук<span>Слабое начало</span></span><p>Выпуск открывается белой комнатой, которая на глазах уходит в цвет гостя под его главную фразу.</p></div>
-        <div class="rv"><span class="was">Обложка<span>Нет айдентики выпуска</span></span><p>Каждое превью строится по одной схеме: складки в цвете гостя, имя заглавными Tenor Sans, фраза из выпуска. Лента канала складывается в палитру.</p></div>
+        <div class="rv"><span class="was">Локация<span>Студия без хозяина</span></span><p>Стена подписанных салфеток превращает студию в дом шоу с собственной историей.</p></div>
+        <div class="rv"><span class="was">Шрифты<span>Четыре стиля</span></span><p>Два голоса: фирменный шрифт шоу для подписей и рукописные синие чернила для цифр и фраз.</p></div>
+        <div class="rv"><span class="was">Графика<span>Тетрадь и текст без стиля</span></span><p>Тетрадный лист меняем на салфетку, вся графика держится на синем и белом.</p></div>
+        <div class="rv"><span class="was">Голос<span>Тихий закадр</span></span><p>Уверенная подача и звуковой логотип: скрип ручки по бумаге.</p></div>
+        <div class="rv"><span class="was">Хук<span>Слабое начало</span></span><p>Выпуск открывается фразой гостя, которая на экране пишется от руки.</p></div>
+        <div class="rv"><span class="was">Обложка<span>Нет айдентики выпуска</span></span><p>Одна схема превью: гость, синий свет, фраза рукописными чернилами.</p></div>
       </div>
     </div>
 
     <div class="risk rv">
-      <div><span class="lab">Риск</span><p>Белая комната может напомнить фотостудию.</p></div>
-      <div><span class="lab">Решение</span><p>Теплый свет за бумагой, глубокие складки с боковыми тенями и темная мебель держат контраст и фактуру.</p></div>
+      <div><span class="lab">Бюджет</span><p>Свет, рамы, салфетница, несколько предметов декора и обновление графики. Мебель и планировка остаются.</p></div>
+      <div><span class="lab">Узнаваемость</span><p>Логотип, шрифт и палитра остаются прежними, зритель узнает шоу с первого кадра.</p></div>
     </div>
   </div></section>
 </article>
@@ -654,14 +638,13 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
   <div class="eyebrow rv">Сравнение</div>
   <h2 class="h2 rv">Два направления рядом.</h2>
   <div class="cmp-wrap rv"><table class="cmp">
-    <tr><th></th><th class="r">Кольцо</th><th class="p">Салфетка</th></tr>
-    <tr><td>Главная сила</td><td>Статус, драматургия света, вид сверху</td><td>Прямая связь с названием шоу</td></tr>
-    <tr><td>Настроение</td><td>Переговоры, решения, ночь</td><td>Галерея, воздух, цвет</td></tr>
-    <tr><td>Что меняется под гостя</td><td>Покрытие подиума</td><td>Цвет света, знак на стене</td></tr>
-    <tr><td>Пилот с Катей Голден</td><td>Подиум пудреница</td><td>Пудровая комната</td></tr>
-    <tr><td>Шрифты</td><td>Unbounded, Onest, Caveat</td><td>Tenor Sans, Manrope</td></tr>
-    <tr><td>Постройка</td><td>Кольцо, подиум, сменные покрытия</td><td>Бумажные стены, свет, сменные панели</td></tr>
-    <tr><td>Риск</td><td>Пустота на общем плане</td><td>Сходство с фотостудией</td></tr>
+    <tr><th></th><th class="r">Кольцо</th><th class="p" style="font-family:var(--r-hand);font-weight:700;font-size:30px;letter-spacing:0;text-transform:none;color:#a9bbff">Чернила</th></tr>
+    <tr><td>Главная сила</td><td>Статус, драматургия света, вид сверху</td><td>Узнаваемость сохраняется, картинка становится сильнее</td></tr>
+    <tr><td>Студия</td><td>Новый сет</td><td>Текущая студия с точечными усилениями</td></tr>
+    <tr><td>Айдентика</td><td>Новая графика</td><td>Логотип, шрифт и сине белая палитра остаются</td></tr>
+    <tr><td>Что меняется под гостя</td><td>Покрытие подиума</td><td>Новая подписанная салфетка на стене</td></tr>
+    <tr><td>Бюджет</td><td>Постройка подиума и кольца</td><td>Свет, рамы, декор, графика</td></tr>
+    <tr><td>Срок запуска</td><td>Нужна постройка</td><td>Можно внедрять с ближайшего выпуска</td></tr>
   </table></div>
 </div></section>
 
@@ -669,7 +652,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6
   <div class="eyebrow rv">Дальше</div>
   <h2 class="h2 rv">Четыре шага до пилота с Катей Голден.</h2>
   <div class="steps">
-    <div class="rv"><span class="k">1</span><h4>Выбор направления</h4><p>Вы выбираете Кольцо или Салфетку.</p></div>
+    <div class="rv"><span class="k">1</span><h4>Выбор направления</h4><p>Вы выбираете Кольцо или Чернила.</p></div>
     <div class="rv"><span class="k">2</span><h4>Визуализация</h4><p>Фотореалистичные рендеры, раскадровка выпуска и пакет графики.</p></div>
     <div class="rv"><span class="k">3</span><h4>Смета и площадка</h4><p>Подбор павильона, расчет постройки, света и сменных элементов.</p></div>
     <div class="rv"><span class="k">4</span><h4>Пилот</h4><p>Съемка выпуска с Катей Голден и проверка кадра на телевизоре и в shorts.</p></div>

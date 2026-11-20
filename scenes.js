@@ -60,7 +60,10 @@
     const pod=new T.Mesh(new T.CylinderGeometry(2.8,2.85,.18,128),[rim,podTop,rim]);pod.position.y=.09;pod.receiveShadow=true;scene.add(pod);
     const lip=new T.Mesh(new T.TorusGeometry(2.8,.05,16,160),rim);lip.rotation.x=Math.PI/2;lip.position.y=.18;scene.add(lip);
     const g=new T.Group();g.position.y=.18;scene.add(g);
-    const st=seats(g,0x2c2420);coffee(g);
+    const st=seats(g,0x0b1238);coffee(g);
+    const blueLine=new T.Mesh(new T.TorusGeometry(2.95,.025,12,200),new T.MeshBasicMaterial({color:0x4d6bff,toneMapped:false}));blueLine.rotation.x=Math.PI/2;blueLine.position.y=.01;scene.add(blueLine);
+    const blueGlow=new T.Mesh(new T.RingGeometry(2.86,3.6,160),new T.MeshBasicMaterial({color:0x2a46d8,transparent:true,opacity:.09,blending:T.AdditiveBlending,depthWrite:false}));blueGlow.rotation.x=-Math.PI/2;blueGlow.position.y=.008;scene.add(blueGlow);
+    const bb=new T.PointLight(0x2f4cff,.9,10,1.6);bb.position.set(0,1.2,-4.5);scene.add(bb);
     const ringMat=new T.MeshBasicMaterial({color:0xfff0dc});
     const rg=new T.Mesh(new T.TorusGeometry(2.1,.045,16,160),ringMat);rg.rotation.x=Math.PI/2;rg.position.y=3.5;scene.add(rg);
     const glowMat=new T.MeshBasicMaterial({color:0xffc98a,transparent:true,opacity:.2,blending:T.AdditiveBlending,depthWrite:false});
@@ -72,7 +75,7 @@
     anch.push({p:new T.Vector3(2.1,3.5,0),t:'1'},{p:new T.Vector3(-2.2,.2,1.6),t:'2'},{p:new T.Vector3(0,.66,.22),t:'3'},{p:new T.Vector3(-1.35,1.25,.35),t:'4'},{p:new T.Vector3(3.8,0,-1.4),t:'5'});
     cams(scene,anch);
     const kinds=['carpet','asphalt','oak','board','powder'],cache={};
-    const rimCols=[0x161618,0x161618,0x161618,0x161618,0xd9a27e];
+    const rimCols=[0x0c1a66,0x0c1a66,0x0c1a66,0x0c1a66,0xd9a27e];
     function variant(i){const k=kinds[i];podTop.map=cache[k]||(cache[k]=tex(k));podTop.roughness=[1,.95,.45,.3,.95][i];podTop.metalness=i===3?.3:0;podTop.needsUpdate=true;
       rim.color.setHex(rimCols[i]);rim.metalness=i===4?1:0;rim.roughness=i===4?.25:.4;rim.needsUpdate=true}
     variant(0);
@@ -121,5 +124,62 @@
       settle(){cur.copy(cols[target]);apply(cur);auto=false}};
   }
 
-  window.SetScenes={ring,paper};
+
+  function inkTex(who){return cv(2048,2048,(x,w,h)=>{
+    x.fillStyle='#f4f1ea';x.fillRect(0,0,w,h);
+    for(let i=0;i<9000;i++){x.fillStyle='rgba(0,0,0,'+(Math.random()*.025)+')';x.fillRect(Math.random()*w,Math.random()*h,2,2)}
+    x.strokeStyle='rgba(120,130,170,.22)';x.lineWidth=6;x.strokeRect(150,150,w-300,h-300);x.lineWidth=2;x.strokeRect(190,190,w-380,h-380);
+    x.fillStyle='rgba(120,130,170,.2)';for(let i=230;i<w-230;i+=46){[[i,170],[i,h-170],[170,i],[w-170,i]].forEach(([a,b])=>{x.beginPath();x.arc(a,b,6,0,7);x.fill()})}
+    const ink='#1d3592';x.fillStyle=ink;x.strokeStyle=ink;x.lineCap='round';x.textAlign='center';
+    x.font='700 150px Caveat, "Comic Sans MS", cursive';x.fillText(who[0],w/2,h-520);
+    x.lineWidth=10;x.beginPath();x.moveTo(w/2-520,h-470);x.bezierCurveTo(w/2-200,h-500,w/2+200,h-440,w/2+520,h-480);x.stroke();
+    x.font='700 96px Caveat, "Comic Sans MS", cursive';x.fillText(who[1],w/2,h-330);
+    x.save();x.translate(420,620);x.rotate(-.12);x.font='700 110px Caveat, cursive';x.fillText('1.',0,0);x.fillText('2.',0,150);x.fillText('3.',0,300);x.restore();
+    x.lineWidth=7;for(let k=0;k<3;k++){x.beginPath();x.moveTo(520,600+k*150-k*18);x.bezierCurveTo(700,560+k*150,860,640+k*150,1020,590+k*150);x.stroke()}
+    x.save();x.translate(w-560,700);x.rotate(.15);x.font='700 170px Caveat, cursive';x.fillText(who[2],0,0);x.lineWidth=8;x.beginPath();x.ellipse(0,-50,260,120,0,0,7);x.stroke();x.restore();
+  })}
+  function ink(scene,anch){
+    scene.add(new T.AmbientLight(0xfff4e8,.1));
+    scene.add(new T.HemisphereLight(0xfffaf2,0xb9b0a2,.18));
+    const floor=add(scene,new T.PlaneGeometry(40,40),M(0xd8d2c7,{r:.85}),0,0,0,false);floor.rotation.x=-Math.PI/2;
+    // curtains around: warm white folds
+    const cur=M(0xd3c9b8,{r:.95});[-1,1].forEach(sd=>{const sp=add(scene,new T.PlaneGeometry(10,5.2),cur,sd*6.6,2.6,0,false);sp.rotation.y=-sd*Math.PI/2});
+    const N=70,R=5.2;for(let i=0;i<N;i++){const th=Math.PI*.18+i/(N-1)*Math.PI*.64;const x=Math.cos(th)*R*1.35,z=-Math.sin(th)*R*.75;
+      const m=add(scene,new T.CylinderGeometry(.13,.13,5.2,10,1,false,0,Math.PI),cur,x,2.6,z,false);m.rotation.y=-th+Math.PI/2}
+    add(scene,new T.PlaneGeometry(16,5.2),cur,0,2.6,-4.05,false);
+    // blue runner: ink line across the floor
+    const runMat=M(0x0c1a66,{r:.95});
+    const run=add(scene,new T.PlaneGeometry(14,1.5),runMat,0,.012,.35,false);run.rotation.x=-Math.PI/2;
+    const edge=M(0xf4f1ea,{r:.9});[-.68,.68].forEach(dz=>{const e=add(scene,new T.PlaneGeometry(14,.025),edge,0,.014,.35+dz,false);e.rotation.x=-Math.PI/2});
+    const g=new T.Group();g.position.set(0,.015,.35);scene.add(g);
+    const stt=seats(g,0x0b1238);
+    // low table with name plaque
+    const white=M(0xf4f1ea,{r:.6});
+    add(g,new T.BoxGeometry(1.5,.08,.62),white,0,.44,0);
+    add(g,new T.BoxGeometry(1.42,.36,.5),white,0,.2,0);
+    const plate=new T.MeshStandardMaterial({roughness:.6});
+    const pl=add(g,new T.PlaneGeometry(1.42,.26),plate,0,.25,.252,false);
+    add(g,new T.BoxGeometry(.2,.06,.08),M(0xc49a4e,{r:.25,m:1}),.35,.51,0);
+    for(let i=0;i<3;i++){const nn=add(g,new T.BoxGeometry(.012,.1,.075),M(0xf6f3ec,{r:1}),.32+i*.025,.56,0);}
+    add(g,new T.CylinderGeometry(.012,.012,.16,8),M(0x1d3592,{r:.3}),-.3,.49,.08).rotation.z=Math.PI/2;
+    // palms in white urns, symmetric
+    const urnPts=[[0,0],[.28,0],[.3,.05],[.22,.12],[.26,.5],[.42,.78],[.46,.86],[.4,.88],[0,.88]].map(p=>new T.Vector2(p[0],p[1]));
+    const leaf=M(0x22391f,{r:.7,s:T.DoubleSide});
+    [-3.6,3.6].forEach(x=>{const u=add(scene,new T.LatheGeometry(urnPts,40),white,x,0,-1.6);
+      for(let k=0;k<11;k++){const a=k/11*Math.PI*2,tilt=.5+(k%3)*.25;const l=new T.Mesh(new T.SphereGeometry(1,10,6),leaf);l.scale.set(.55,.04,.13);
+        const grp=new T.Group();grp.position.set(x,1.25,-1.6);grp.rotation.y=a;l.position.set(.6,0,0);l.rotation.z=-tilt*.6;grp.add(l);l.castShadow=true;scene.add(grp)}
+      add(scene,new T.CylinderGeometry(.04,.05,.5,8),M(0x5a4632,{r:.8}),x,1.05,-1.6)});
+    // lights: soft daylight
+    const key=new T.SpotLight(0xfff3e4,.95,18,Math.PI/4,.8,1);key.position.set(2,6,6);key.target.position.set(0,.6,0);key.castShadow=true;key.shadow.mapSize.set(1536,1536);key.shadow.radius=4;scene.add(key,key.target);
+    const fill=new T.DirectionalLight(0xffffff,.18);fill.position.set(-4,4,3);scene.add(fill);
+    anch.push({p:new T.Vector3(4.4,.02,.35),t:'1'},{p:new T.Vector3(0,.27,.9),t:'2'},{p:new T.Vector3(0,.6,.35),t:'3'},{p:new T.Vector3(3.6,1.6,-1.6),t:'4'},{p:new T.Vector3(-1.6,3.2,-3.9),t:'5'});
+    cams(scene,anch);
+    const V=['Катя Голден','Frambini','Пулково','Катя Голден'],G=['ГОСТЬ ВЫПУСКА','ОСНОВАТЕЛЬ FRAMBINI','ГЛАВА ПУЛКОВО','КАТЯ ГОЛДЕН'],cache={};
+    function plTex(i){return cv(2048,376,(x,w,h)=>{x.fillStyle='#f4f1ea';x.fillRect(0,0,w,h);x.fillStyle='#1d3592';x.fillRect(w/2-3,40,6,h-80);x.textAlign='center';x.textBaseline='middle';
+      x.font='700 150px Caveat, "Comic Sans MS", cursive';x.fillText('Кучмент',w/4,h/2);x.fillText(i===0?'гость':V[i],w*3/4,h/2)})}
+    function variant(i){plate.map=cache[i]||(cache[i]=plTex(i));plate.needsUpdate=true}
+    variant(0);
+    return {variant,third:stt.third,tick(){},settle(){}};
+  }
+  window.SetScenes={ring,paper,ink};
 })();
